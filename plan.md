@@ -53,11 +53,11 @@ For a more sophisticated NLP solution, we can later integrate libraries like spa
 
 --------------------
 
-## Current Output Status :
+## Current Output Status : 17th Sept, 14:22 IST
 
-Enter your command: remove file
-Closest match found: 'move file'. Is this correct? (y/n): n
-Closest match found: 'remove directory'. Is this correct? (y/n): n
-Closest match found: 'delete file'. Is this correct? (y/n): y
-Executing: rm <filename>
-Enter filename: deleteme.txt
+        Enter your command: remove file
+        Closest match found: 'move file'. Is this correct? (y/n): n
+        Closest match found: 'remove directory'. Is this correct? (y/n): n
+        Closest match found: 'delete file'. Is this correct? (y/n): y
+        Executing: rm <filename>
+        Enter filename: deleteme.txt
