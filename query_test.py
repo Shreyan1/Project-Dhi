@@ -6,14 +6,16 @@ Year : 2024
 
 Please feel free to collaborate on this.
 Raise issues, PR, anything. I'll review them and fix right away.
+--------------------------------------------------------------------
 """
+
 
 import sqlite3
 import subprocess
 import re
 
 # Connect to the SQLite database
-def connect_db(db_path='db_contents.db'):
+def connect_db(db_path='SQLiteDB/db_contents.db'):
     try:
         conn = sqlite3.connect(db_path)
         return conn
