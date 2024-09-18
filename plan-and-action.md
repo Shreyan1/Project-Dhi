@@ -31,12 +31,12 @@
 
 
 -------------------------------------------------------
-
-# NLP Implementation : 
+# Update 1 :
+## NLP Implementation : 
 
 To implement a Natural Language Processing (NLP) system that can understand user input and match it to the closest natural language command in the database, we need to take the following steps:
 
-### Approach:
+### Approach 1:
 
 - Text Preprocessing: Clean the user input to make it easier to compare with the commands in the database.
 - Similarity Measure: Use a method to measure similarity between the user's input and the commands in the database. We can start with a basic approach, such as:
@@ -46,6 +46,12 @@ To implement a Natural Language Processing (NLP) system that can understand user
 - Rank the Matches: Rank the possible matches from the database and choose the closest one.
 - Handle Fuzzy Matching: If no exact match is found, suggest the closest matches or handle errors gracefully.
 
+
+### Approach 2:
+
+- Use TRANSFORMERS FOR GOD'S SAKE !!
+- 
+
 ### Implementation:
 We can start by using a simple similarity metric, like Levenshtein Distance, which calculates the number of edits (insertions, deletions, or substitutions) needed to transform one string into another. This method works well for fuzzy matching.
 
@@ -53,7 +59,9 @@ For a more sophisticated NLP solution, we can later integrate libraries like spa
 
 --------------------
 
-## Current Output Status : 17th Sept, 14:22 IST
+## Current Output Status : 
+
+17th Sept, 14:22 IST
 
         Enter your command: remove file
         Closest match found: 'move file'. Is this correct? (y/n): n
@@ -61,3 +69,13 @@ For a more sophisticated NLP solution, we can later integrate libraries like spa
         Closest match found: 'delete file'. Is this correct? (y/n): y
         Executing: rm <filename>
         Enter filename: deleteme.txt
+
+
+18th Sept, 17:42 IST -- PROGRESS YESS !
+
+        Enter your command: remove this file
+        Closest match found: 'delete file'. Is this correct? (y/n): y
+        Executing: rm <filename>
+        Enter filename: testfile.md
+
+
