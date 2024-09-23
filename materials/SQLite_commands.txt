@@ -1,0 +1,10 @@
+1. To insert values into the "CMD-LIST" table in your SQLite database : 
+		INSERT INTO "CMD-LIST" (id, natural_language, command, description) VALUES (value1, value2, value3, value4);
+
+2. To fetch all natural language commands from the database : 
+		SELECT natural_language FROM "CMD-LIST";
+
+3. To delete the row with an id of 2, you would use the following query: 
+		DELETE FROM "CMD-LIST" WHERE id = 2;
+
+4. 

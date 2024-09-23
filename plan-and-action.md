@@ -79,3 +79,21 @@ For a more sophisticated NLP solution, we can later integrate libraries like spa
         Enter filename: testfile.md
 
 
+23rd Sept, 18:38 IST -- UNSTABLE !!
+
+        Enter your command: list all file in home
+        Closest match found: 'list all files'. Is this correct? (y/n): n
+        Closest match found: 'show current directory'. Is this correct? (y/n): n
+        Closest match found: 'find all text files'. Is this correct? (y/n): n
+        Closest match found: 'list all files in <foldername>'. Is this correct? (y/n): y
+        
+        Executing: cd <foldername> ; ls -l
+        Enter foldername: home
+        Permission denied or folder does not exist: /home/shreyan/Documents/Github/Project-Dhi/home
+        total 144
+        
+        -rw-rw-r-- 1 shreyan shreyan  3643 Sep 23 14:36 Approach1(depreciated).py
+        -rw-rw-r-- 1 shreyan shreyan  4786 Sep 23 18:36 Approach2.py
+        -rw-rw-r-- 1 shreyan shreyan 56576 Sep 16 16:41 commandlist.txt
+        -rw-rw-r-- 1 shreyan shreyan  1387 Sep 23 18:36 folder_handling.py
+        -rw-rw-r-- 1 shreyan shreyan    17 Sep 17 11:26 Funding.yml
