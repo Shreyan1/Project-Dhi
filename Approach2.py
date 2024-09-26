@@ -83,8 +83,7 @@ def execute_command(command):
         # print(f"Executing command: {command}")
         result = subprocess.run(command, 
                                 shell=True,  # This allows execution of shell commands with syntax like semicolons
-                                check=True, 
-                                text=True, 
+                                check=True, text=True, 
                                 stdout=subprocess.PIPE, 
                                 stderr=subprocess.PIPE)
         return result.stdout

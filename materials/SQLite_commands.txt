@@ -7,4 +7,28 @@
 3. To delete the row with an id of 2, you would use the following query: 
 		DELETE FROM "CMD-LIST" WHERE id = 2;
 
-4. 
+4. Format to update entire SQLite DB :
+		-- Update record for ID 1
+			UPDATE "CMD-LIST"
+			SET natural_language = 'clear terminal screen',
+			    command = 'clear',
+			    description = 'Clear the terminal screen',
+			    category = 'Other'
+			WHERE id = 1;
+
+		-- Update record for ID 2
+			UPDATE "CMD-LIST"
+			SET natural_language = 'copy file',
+			    command = 'cp <source> <destination>',
+			    description = 'Copy file from source to destination',
+			    category = 'File Management'
+			WHERE id = 2;
+
+5. To sort according to ascending :  
+		SELECT * FROM "CMD-LIST" 
+		ORDER BY "natural_language" ASC
+
+
+6. Delete ID row : 
+		DELETE FROM "CMD-LIST"
+		WHERE ID=8
