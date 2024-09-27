@@ -51,6 +51,7 @@ To implement a Natural Language Processing (NLP) system that can understand user
 
 - Use TRANSFORMERS FOR GOD'S SAKE !!
 - need to handle the sudo login
+- Using Sentence Transformers is proving to be better
 
 ### Implementation:
 We can start by using a simple similarity metric, like Levenshtein Distance, which calculates the number of edits (insertions, deletions, or substitutions) needed to transform one string into another. This method works well for fuzzy matching.
