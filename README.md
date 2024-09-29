@@ -14,8 +14,8 @@ coming soon |
 
 For starters - 
 1. `pip install -r requirements.txt`
-2. chmod +X run.sh
-3. ./run.sh
+2. `chmod +X run.sh`
+3. `./run.sh`
 
    
 ## Collab work : 🤝
