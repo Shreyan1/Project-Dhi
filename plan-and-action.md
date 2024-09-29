@@ -12,6 +12,7 @@
         - natural language
         - command
         - description
+        - Category
 - The natural language input by the user will be checked for the query, if it is matching, it will fetch that particular command and execute it on the terminal
 - this is like the basic idea, we can optimise it far far more and make it the best thing
 
@@ -36,7 +37,7 @@
 
 To implement a Natural Language Processing (NLP) system that can understand user input and match it to the closest natural language command in the database, we need to take the following steps:
 
-### Approach 1:
+### Approach 1: (DEPRECIATED)
 
 - Text Preprocessing: Clean the user input to make it easier to compare with the commands in the database.
 - Similarity Measure: Use a method to measure similarity between the user's input and the commands in the database. We can start with a basic approach, such as:
@@ -46,13 +47,19 @@ To implement a Natural Language Processing (NLP) system that can understand user
 - Rank the Matches: Rank the possible matches from the database and choose the closest one.
 - Handle Fuzzy Matching: If no exact match is found, suggest the closest matches or handle errors gracefully.
 
+---------------------------------------
 
 ### Approach 2:
 
 - Use TRANSFORMERS FOR GOD'S SAKE !!
 - need to handle the sudo login
 - Using Sentence Transformers is proving to be better
+- Need to change the SQLite DB to a VectorDB like ChromaDB
+- Bash script has been updated to accomodate --help or -H parameter and also to handle errors
 
+
+
+---------------------------------------
 ### Implementation:
 We can start by using a simple similarity metric, like Levenshtein Distance, which calculates the number of edits (insertions, deletions, or substitutions) needed to transform one string into another. This method works well for fuzzy matching.
 

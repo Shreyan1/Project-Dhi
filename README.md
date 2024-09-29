@@ -10,7 +10,7 @@
 
 work in progress
 |
-coming soon
+coming soon | For starters - `pip install -r requirements.txt`
 
 ## Collab work : 🤝
 - Need help with to populate the SQLite DB with more appropriate commands

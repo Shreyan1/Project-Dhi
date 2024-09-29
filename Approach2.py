@@ -111,7 +111,7 @@ def find_closest_commands(user_input, command_list):
 def confirm_match(closest_command, similarity):
     while True:
         try:
-            confirmation = input(f"Closest match found: '{closest_command}' (Similarity: {(similarity*100):.2f}%). Is this correct? (y/n ? Press q to quit): ")
+            confirmation = input(f"Closest match found: '{closest_command}' (Similarity: {(similarity*100):.2f}%). \nIs this correct? (y/n ? Press q to quit): ")
         
             if confirmation.lower() == 'y':
                 return True
