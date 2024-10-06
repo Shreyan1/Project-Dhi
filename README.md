@@ -8,6 +8,8 @@
 
 ## Installation 💾
 
+Supported OS : Linux (Debian, Arch, ...)
+
 work in progress
 |
 coming soon | 
