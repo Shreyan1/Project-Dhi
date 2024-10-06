@@ -1,0 +1,23 @@
+id,natural_language,command,description,category
+1,clear the screen; wipe the terminal; clean the screen; erase the terminal display; reset the terminal,clear,Clear the terminal screen,Other
+2,copy file from <source> to <destination>; duplicate <source> to <destination>; send <source> to <destination>; move <source> to <destination>; backup <source> to <destination>,cp <source> <destination>,Copy file from source to destination,File Management
+3,make new folder called <foldername>; add a directory <foldername>; build a folder named <foldername>; generate a directory <foldername>,mkdir <foldername>,Create a new directory,File Management
+4,remove file <filename>; trash <filename>; get rid of <filename>; wipe out <filename>; kill <filename>,rm <filename>,Delete a file,File Management
+5,go to folder <foldername>; enter directory <foldername>; change directory to <foldername>; navigate to directory <foldername>; switch to <foldername>,cd < foldername>,Enter directory or folder,Other
+6,locate all python files; search for .py files; find python scripts; list python files in current directory,"find . -name ""*.py""",Find all Python files in the current directory,File Listing
+7,find all txt files; search for text files; list all .txt files,"find . -name ""*.txt""",Find all .txt files in the current directory and subdirectories,File Listing
+9,list files in directory <foldername>; show files in folder <foldername>; display all files in <foldername>,ls -l <foldername>,List all files in the specific directory,File Listing
+10,list files in detail; show all files with details; display detailed file information,ls -l,List all files with detailed information,File Listing
+11,move file from <source> to <destination>; transfer <source> to <destination>; relocate file <source>,mv <source> <destination>,Move file from source to destination,File Management
+12,ping a website; test connection to <address>; send ping to <address>,ping <address>,Ping an IP address or website,Networking
+13,delete directory <foldername>; remove empty folder <foldername>; get rid of <foldername>,rmdir <foldername>,Remove an empty directory,File Management
+14,show running processes; list active processes; display running services,ps aux,Show active processes with detailed information,Process Management
+15,show current folder; display current directory; which folder am I in,pwd,Show the current working directory,Other
+16,show disk space used; display space consumption; how much disk space is used,du -sh,Display disk space usage in human-readable format,Disk Usage & System Info
+17,show disk usage; display storage usage; check how much disk space is left,df -h,Display disk usage in human-readable format,Disk Usage & System Info
+18,show network interfaces; display network settings; list network configurations,ifconfig,Display network interface configurations,Networking
+19,check system uptime; how long has the system been running; display system running time,uptime,Show how long the system has been running,Other
+20,kill process <process_id>; stop process <process_id>; terminate <process_id>,kill <process_id>,Terminate a process using its process ID,Process Management
+21,check CPU usage; display system resource usage; show running processes and CPU usage,top,Show real-time CPU and memory usage of processes,Process Management
+22,display current date and time; what's the date; show current system time,date,Show the current date and time,Other
+23,Show system hostname and OS information; Display the hostname and operating system details; Get the system's name and version; What’s the system's hostname and OS version? ; Show the machine’s hostname and OS type; Display system name and OS info; Get details about the system name and operating system; Fetch hostname and the OS release information; Show me the system's name and OS release; Check the hostname and OS release version,hostnamectl && cat /etc/os-release,Display Hostname and system information,Disk Usage & System Info
