@@ -9,7 +9,7 @@ Raise issues, PR, anything. I'll review them and fix right away.
 --------------------------------------------------------------------
 """
 
-## APPROACH 4 : USING A EMBEDDING UPDATE TO TRAIN THE EMBEDDINGS
+## APPROACH 4 : USING A EMBEDDING UPDATE APPROACH TO UPDATE VECTORS BASED ON USER RESPONSE
  
 import chromadb
 from sentence_transformers import SentenceTransformer
