@@ -1,4 +1,4 @@
-from Approach3 import *
+from Approach3_stable import *
 
 if __name__ == '__main__':
     try:

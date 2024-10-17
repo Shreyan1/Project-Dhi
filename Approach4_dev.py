@@ -38,28 +38,29 @@ def find_closest_commands(user_input, n=6):
     return list(zip(results['ids'], results['documents'][0], results['metadatas'][0], results['distances'][0]))
 
 
-'''
-DESCRIPTION FOR update_embedding():
-
-This function updates the embedding of a command based on user feedback.
-For positive feedback (user selects 'y'), it moves the embedding slightly towards the user input.
-For negative feedback (user selects 'n'), it moves the embedding slightly away from the user input.
-The updated embedding is then normalized and stored back in the database.
-
-This learning mechanism allows the system to gradually adjust its understanding of commands based on user feedback. 
-Over time, it should become better at matching user inputs to the correct commands.
-
-With these changes, every time you interact with the system, it will learn from your feedback. 
-Commands that you frequently use and confirm will become more likely to be suggested first, 
-while commands that you often reject will become less likely to be suggested for similar inputs.
-
-Keep in mind that this learning process is gradual. 
-It may take several interactions before you notice significant improvements in the matching accuracy. 
-Also, the learning is persistent across sessions because we're using the PersistentClient, 
-so the improvements will be retained even after you close and restart the script.
-'''
-
 def update_embedding(command_id, user_input, is_positive):
+
+    '''
+    DESCRIPTION FOR update_embedding():
+
+    This function updates the embedding of a command based on user feedback.
+    For positive feedback (user selects 'y'), it moves the embedding slightly towards the user input.
+    For negative feedback (user selects 'n'), it moves the embedding slightly away from the user input.
+    The updated embedding is then normalized and stored back in the database.
+
+    This learning mechanism allows the system to gradually adjust its understanding of commands based on user feedback. 
+    Over time, it should become better at matching user inputs to the correct commands.
+
+    With these changes, every time you interact with the system, it will learn from your feedback. 
+    Commands that you frequently use and confirm will become more likely to be suggested first, 
+    while commands that you often reject will become less likely to be suggested for similar inputs.
+
+    Keep in mind that this learning process is gradual. 
+    It may take several interactions before you notice significant improvements in the matching accuracy. 
+    Also, the learning is persistent across sessions because we're using the PersistentClient, 
+    so the improvements will be retained even after you close and restart the script.
+    '''
+
     # Get current embedding
     current_embedding = collection.get(ids=[command_id])['embeddings'][0]
     # Get embedding of the user input
@@ -129,7 +130,7 @@ if __name__ == '__main__':
                         description = metadata['description']
                         print(f"Command from database: {command}")
                         print(f"Description: {description}")
-                        
+
                         command_with_values = replace_placeholders(command)
                         print(f"Command after placeholder replacement: {command_with_values}")
                         
