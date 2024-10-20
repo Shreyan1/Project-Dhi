@@ -63,10 +63,10 @@ def execute_command(command):
     except subprocess.CalledProcessError as e:
         return f"Error executing command: {e.stderr}"
 
-def confirm_match(closest_command, similarity):
+def confirm_match(closest_command_desc, similarity):
     while True:
         try:
-            confirmation = input(f"Closest match found: '{closest_command}' (Similarity: {(1-similarity)*100:.2f}%). \nIs this correct? (y/n ? Press q to quit): ")
+            confirmation = input(f"Closest match found: '{closest_command_desc}' (Similarity: {(1-similarity)*100:.2f}%). \nIs this correct? (y/n ? Press q to quit): ")
         
             if confirmation.lower() == 'y':
                 return True
