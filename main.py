@@ -7,7 +7,7 @@ if __name__ == '__main__':
             closest_commands = find_closest_commands(user_input)
             for natural_language, metadata, distance in closest_commands:
                 try:
-                    if confirm_match(natural_language, distance):
+                    if confirm_match(metadata['description'], distance): # instead of natural_language, passing the command description
                         command = metadata['command']
                         description = metadata['description']
                         print(f"Command from database: {command}")
