@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# ASCII Art for Project Dhi
+echo "                "
+echo "* **************** *"
+echo "* |  __ \| |   (_) *"
+echo "* | |  | | |__  _  *"
+echo "* | |  | | '_ \| | *"
+echo "* | |__| | | | | | *"
+echo "* |_____/|_| |_|_| *"
+echo "* **************** *"
+
 # Making sure script is sourced, not executed for venv activation
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     echo "Error: This script must be sourced. Run it as either:"
@@ -236,9 +246,10 @@ run_python_script() {
         return 1
     fi
 
-    echo "Checking for missing packages..."
+    echo "Checking for missing packages. This might take upto a minute..."
     if ! check_and_install_missing_packages; then
         echo "Error: Failed to install missing packages. Cannot run Project Dhi."
+        echo "Please run : source run.sh --help ,to view the help section."
         return 1
     fi
 
