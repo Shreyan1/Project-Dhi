@@ -16,7 +16,9 @@ Run UpdateChromaDB.py to add or update the chromadb based on the CMD-LIST.csv in
 
 import chromadb
 import csv
-import os
+
+# Specify file path to update
+csv_file_path = 'materials/CMD-LIST.csv'
 
 # Specify a directory for Chroma
 persist_directory = "ChromaDB"
@@ -42,9 +44,7 @@ def populate_db(commands):
     for i, cmd in enumerate(commands):
         documents.append(cmd['natural_language'])
         metadatas.append({
-            'command': cmd['command'],
-            'description': cmd['description'],
-            'category': cmd['category']
+            'bash_command': cmd['bash_command']  # Changed to match new column name
         })
         ids.append(str(i))
     
@@ -56,7 +56,7 @@ def populate_db(commands):
     print(f"Added {len(documents)} commands to the database.")
 
 if __name__ == '__main__':
-    csv_file_path = 'materials/CMD-LIST.csv'
     commands = load_commands_from_csv(csv_file_path)
     populate_db(commands)
     print(f"Database population complete. Data stored in {persist_directory}")
+    
