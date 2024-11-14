@@ -12,7 +12,7 @@ Raise issues, PR, anything. I'll review them and fix right away.
 ## APPROACH 3 : USING VECTORDB APPROACH USING CHROMADB
 
 '''
-Run UpdateChromaDB.py to add or update the chromadb based on the CMD-LIST.csv in the materials folder
+Run UpdateChromaDB.py to add or update the chromadb based on the CMD-LIST.csv in the "/materials" folder
 '''
 
 import chromadb
