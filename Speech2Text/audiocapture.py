@@ -11,8 +11,11 @@ import warnings
 warnings.filterwarnings('ignore')  # Suppress all other warnings
 os.environ['TRANSFORMERS_VERBOSITY'] = 'error'  # Suppress transformer warnings
 
+MODELNAME_WHISPER = "openai/whisper-tiny.en"
+SAMPLE_RATE = 16000
+
 class LiveTranscriber:
-    def __init__(self, model_name="openai/whisper-tiny.en", sample_rate=16000):
+    def __init__(self, model_name=MODELNAME_WHISPER, sample_rate=SAMPLE_RATE):
         self.model = pipeline("automatic-speech-recognition", model=model_name)
         self.sample_rate = sample_rate
         self.temp_dir = tempfile.mkdtemp()
@@ -43,7 +46,7 @@ class LiveTranscriber:
         with sd.InputStream(callback=audio_callback, channels=1, samplerate=self.sample_rate, dtype=np.float32):
             start_time = time.time()
             while self.is_recording and time.time() - start_time < duration:
-                time.sleep(0.1)  # Small sleep to prevent high CPU usage
+                time.sleep(0.1)  # Giving a small sleep to prevent high CPU usage
 
         stop_thread.join()  # Ensure stop thread has completed
 
@@ -71,7 +74,8 @@ class LiveTranscriber:
             print("Transcribing...")
             result = self.model(audio_file)
             print("Transcription:", result["text"])
-            os.remove(audio_file)  # Clean up temporary file after transcription
+            # Clean up temporary file after transcription
+            os.remove(audio_file)
 
     def cleanup(self):
         """Clean up temporary directory."""
@@ -89,7 +93,7 @@ def main():
     
     try:
         while True:
-            # Record audio with the option to stop early
+            # Record audio with the option to stop # Clean up temporary file after transcription
             audio_file = transcriber.record_audio(duration=10)
             
             # Transcribe the recorded audio in a separate thread
