@@ -81,6 +81,11 @@ Note: We understand that using OpenAI API model would solve many barriers, but t
 Hence, Project Dhi is designed to run locally, without access to the internet. Our goal is to make it lightweight, fast and independent of any heavy resource or internet utilizations.
 Well, except for the one-time unavoidable pip requirements installation.
 
+## UI Design Prototype
+
+![uidesign](./materials/Dhi2.png)
+#### We need collaborators who can work with Electron js to build this UI.
+
 ## Contact 📧
 
 <a href="shreyan.github@gmail.com" style="margin: 0 15px;">
