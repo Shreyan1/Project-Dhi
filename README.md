@@ -7,9 +7,12 @@
 - Collaborations are highly invited.
 
 ## OpenSource Contributions/ Collab open for : 👨‍💻 
-- Work on the GenModel Approach to better train the command generation model (Will be uploaded to HF with proper contributor credits)
-- Reduce the retreival time using efficient vectordb for the Approach3.py file
-- Work on the UI below using ElectronJS (Figma file would be provided)
+- **GenAI/RAG :**
+   - Work on the GenModel Approach to better train the command generation model (Will be uploaded to HF with proper contributor credits)
+   - Reduce the retreival time using efficient vectordb for the Approach3.py file
+   - Work on Database Caching techniques for faster RAG approaches.
+- **Frontend :**
+   - Work on the UI below using ElectronJS (Figma file would be provided)
 
 ## Installation 💾
 
