@@ -6,6 +6,11 @@
 - Multiple language support coming soon.
 - Collaborations are highly invited.
 
+## OpenSource Contributions/ Collab open for : 👨‍💻 
+- Work on the GenModel Approach to better train the command generation model (Will be uploaded to HF with proper contributor credits)
+- Reduce the retreival time using efficient vectordb for the Approach3.py file
+- Work on the UI below using ElectronJS (Figma file would be provided)
+
 ## Installation 💾
 
 **Supported OS:** Linux (Debian, Arch, ...)
@@ -37,6 +42,11 @@ For starters:
 
 - After installation, simply run `source run.sh` to start Project Dhi.
 - Type your natural language commands, and Project Dhi will interpret and execute them on your terminal.
+
+## UI Design Prototype
+
+![uidesign](./materials/Dhi2.png)
+#### We need collaborators who can work with Electron js to build this UI.
 
 ## Development 🛠️
 
@@ -80,11 +90,6 @@ You can use ```source run.sh --help``` for accessing the help section for more d
 Note: We understand that using OpenAI API model would solve many barriers, but that's exactly the dependency we want to remove. 
 Hence, Project Dhi is designed to run locally, without access to the internet. Our goal is to make it lightweight, fast and independent of any heavy resource or internet utilizations.
 Well, except for the one-time unavoidable pip requirements installation.
-
-## UI Design Prototype
-
-![uidesign](./materials/Dhi2.png)
-#### We need collaborators who can work with Electron js to build this UI.
 
 ## Contact 📧
 
